@@ -5,10 +5,11 @@ import Link from "next/link";
 export default function ItemList({ list }) {
   return (
     <div>
-      <Grid columns={3} divided>
+      <Grid columns={3}>
         <Grid.Row>
           {list.map((item) => (
             <Grid.Column key={item.id}>
+              {/* <Link href="/view/[id]" as={`/view/${item.id}`}> */}
               <Link href={`/view/${item.id}`}>
                 <a>
                   <div className={styles.wrap}>
